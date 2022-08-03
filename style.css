@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+.side-nav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    margin-top: 65px;
+}
+
+.side-nav:first-child {
+    border-top: none;
+}
+
+.side-nav.close {
+    width: 72px;
+}
+
+ul li.close {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    font-size: .65em;
+    padding: 1.5em;
+}
+
+.side-nav span {
+    margin: 0 .8em 0 .5em;
+}
+
+ul {
+    border-top: 2px solid #aaa;
+    padding: .5em 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    padding: .6em;
+    cursor: pointer;
+}
+
+.content.close {
+    margin-left: 72px;
+}
+
+.content {
+    margin-left: 200px;
+}
+
+.videos {
+    background-color: #f9f9f9;
+    margin-top: 150px;
+}
+
+.video-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3rem 1rem;
+    padding: 3rem 0;
+    margin: 0 1.5rem;
+    border-top: 4px solid #ccc;
+}
+
+.video-section:first-child {
+    border-top: none;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-thumbnail {
+    position: relative;
+    display: flex;
+}
+
+.video-thumbnail::before {
+    content: attr(video-duration);
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: .1em .3em;
+    border-radius: .3em;
+    font-size: .9em;
+}
+
+.thumbnail-image {
+    width: 100%;
+    height: 100%;
+    min-width: 250px;
+    min-height: 150px;
+    background-color: #aaa;
+}
+
+.video-bottom-section {
+    display: flex;
+    align-items: flex-start;
+    margin: .5em;
+}
+
+.channel-logo {
+    border-radius: 50%;
+    margin-right: .75em;
+}
+
+.video-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: .5em;
+    color: black;
+    text-decoration: none;
+}
+
+.channel-name {
+    text-decoration: none;
+    margin-bottom: .1em;
+    color: #555;
+    transition: color 2ms;
+}
+
+.channel-name:hover {
+    color: #111;
+}
+
+.video-data {
+    color: #555;
+}
+
+.section-title {
+    grid-column: 1 / -1;
+    margin: -.5em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .5em;
+}
+
+.section-title-close {
+    outline: none;
+    border: none;
+    color: black;
+    background-color: transparent;
+    font-size: 2rem;
+    color: #555;
+    cursor: pointer;
+}
+
+.categories {
+    padding: 1em .5em;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    position: fixed;
+    background-color: white;
+    z-index: 2;
+    top: 66px;
+}
+
+.category-section {
+    display: flex;
+    overflow: hidden;
+}
+
+.category.active {
+    background-color: #606060;
+    color: white;
+}
+
+.category {
+    outline: none;
+    border: 1px solid #ccc;
+    word-wrap: none;
+    white-space: nowrap;
+    margin-right: 1rem;
+    border-radius: 900px;
+    background-color: #e7e7e7;
+    padding: .5rem 1rem;
+    font-size: inherit;
+    cursor: pointer;
+    transition: background-color 20ms;
+}
+
+.category:hover {
+    background-color: #ddd;
+}
+
+.category:last-child {
+    margin-right: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+    top: 0;
+}
+
+.header a {
+    text-decoration: none;
+    padding: 0 1em 0 .5em;
+}
+
+.youtube-logo {
+    height: 25px;
+    margin-left: 1em;
+}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 3rem 0 4rem;
+}
+
+.search {
+    width: 80%;
+    font-size: inherit;
+    padding: .4em;
+    border: 1px solid #777;
+    outline: none;
+}
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    background-color: #f8f8f8;
+    border: 1px solid #777;
+    border-left: none;
+    cursor: pointer;
+}
+
+.menu-icons a {
+    color: #333;
+    text-decoration: none;
+    padding: 0 .5em;
+    font-size: 1.3rem;
+    z-index: 2;
+}
+
